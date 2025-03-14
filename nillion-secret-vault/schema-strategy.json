@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Strategies",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "_id": {
+                "type": "string",
+                "format": "uuid",
+                "coerce": true
+            },
+            "name": {
+                "type": "object",
+                "properties": {
+                    "$share": {
+                        "type": "string"
+                    }
+                },
+                "required": ["$share"]
+            },
+            "strategy_type": {
+                "type": "object",
+                "properties": {
+                    "$share": {
+                        "type": "string"
+                    }
+                },
+                "required": ["$share"]
+            },
+            "description": {
+                "type": "object",
+                "properties": {
+                    "$share": {
+                        "type": "string"
+                    }
+                },
+                "required": ["$share"]
+            },
+            "code": {
+                "type": "object",
+                "items": {
+                    "type": "string"
+                },
+                "minItems": 1,
+                "properties": {
+                    "$share": {
+                        "type": "string"
+                    }
+                }
+            },
+            "provider": {
+                "type": "object",
+                "properties": {
+                    "$share": {
+                        "type": "string"
+                    }
+                },
+                "required": ["$share"]
+            },
+            "roi": {
+                "type": "number"
+            },
+            "profitability": {
+                "type": "number"
+            },
+            "risk": {
+                "type": "number"
+            }
+        },
+        "required": ["_id", "name", "code", "provider", "roi", "profitability", "risk" ]
+    }
+}
