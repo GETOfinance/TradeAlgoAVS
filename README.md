@@ -44,6 +44,10 @@ TradeAlgoAVS allows:
 - Poor-performing strategies are naturally filtered out.
 - Strategy providers must backtest and paper trade before publishing.
 
+## Deployment on Sonic Blaze Testnet
+
+  [Smart Contract Address: 0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8](https://testnet.sonicscan.org/address/0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8#code)
+
 ![UI](./ui.png)
 
 ## Trust Modelling and Protocol Design
