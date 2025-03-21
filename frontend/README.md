@@ -7,7 +7,7 @@ Web3 (blockchain) folder was created with hardhat framework.
 ## Setting Up
 Blockchain folder's env file `./blockchain/.env`
 ```
-PRIVATE_KEY=9567d4c0b48d0........0a
+PRIVATE_KEY=yourPriveteKeyHere
 ```
 
 ### Blockchain Network
@@ -20,10 +20,8 @@ The project uses Sonic Blaze Testnet:
 
 Frontend `.env` file should contain
 ```
-NEXT_PUBLIC_ONCHAINKIT_API_KEY=hY5oCV.....cJeLh
-NEXT_PUBLIC_USE_TESTNET=true
-NEXT_PUBLIC_API_URL=http://trade-algo-avs-backend-dev-service-960625539149.us-central1.run.app
-NEXT_PUBLIC_CONTRACT_ADDRESS=0x967E8625EFE86ac5fb82102C466b56c2c507417f
+NEXT_PUBLIC_API_URL=your URL
+NEXT_PUBLIC_CONTRACT_ADDRESS=0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8
 ```
 
 ## Getting Started
@@ -31,13 +29,8 @@ NEXT_PUBLIC_CONTRACT_ADDRESS=0x967E8625EFE86ac5fb82102C466b56c2c507417f
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
