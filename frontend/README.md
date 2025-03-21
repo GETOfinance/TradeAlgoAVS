@@ -7,7 +7,7 @@ Web3 (blockchain) folder was created with hardhat framework.
 ## Setting Up
 Blockchain folder's env file `./blockchain/.env`
 ```
-PRIVATE_KEY=yourPriveteKeyHere
+PRIVATE_KEY=yourPrivateKeyHere
 ```
 
 ### Blockchain Network
