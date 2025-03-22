@@ -8,6 +8,9 @@ import { cookieToInitialState } from "wagmi";
 import { getConfig } from "./wagmi.config";
 import { Providers } from "./providers";
 import Navbar from "./components/Navbar";
+// Load compatibility polyfills and patches
+import "./utils/compat";
+import "./patches/onchainkit-patch";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,9 +39,10 @@ export default async function RootLayout({
   );
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <Providers initialState={initialState}>
           <Navbar />

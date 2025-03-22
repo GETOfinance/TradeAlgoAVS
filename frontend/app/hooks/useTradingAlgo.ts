@@ -19,7 +19,11 @@ export function useTradingAlgo() {
 
   // 初始化 Provider 和 Contract
   useEffect(() => {
+    let mounted = true;
+    
     const initContract = async () => {
+      if (!mounted) return;
+      
       if (
         typeof window !== "undefined" &&
         isConnected &&
@@ -34,17 +38,28 @@ export function useTradingAlgo() {
             tradingAlgoABI,
             signer
           );
-          setProvider(_provider);
-          setContract(_contract);
-          setIsContractReady(true);
+          if (mounted) {
+            setProvider(_provider);
+            setContract(_contract);
+            setIsContractReady(true);
+          }
         } catch (error) {
           console.error("Contract initialization error:", error);
-          setIsContractReady(false);
+          if (mounted) {
+            setIsContractReady(false);
+          }
         }
       }
     };
-
-    initContract();
+    
+    // Only run on client-side
+    if (typeof window !== "undefined") {
+      initContract();
+    }
+    
+    return () => {
+      mounted = false;
+    };
   }, [isConnected]);
 
   // 🔹 1️⃣ 先把策略上傳到後端
